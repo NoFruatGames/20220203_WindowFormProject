@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace project
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            loginPanel.Visible = true;
+            registerPanel.Visible = false;
+            registerPanel.Location = loginPanel.Location;
+        }
+
+        private void showLoginButton_Click(object sender, EventArgs e)
+        {
+            loginPanel.Visible = true;
+            registerPanel.Visible = false;
+        }
+
+        private void showRegisterButton_Click(object sender, EventArgs e)
+        {
+            loginPanel.Visible = false;
+            registerPanel.Visible = true;
         }
     }
 }
